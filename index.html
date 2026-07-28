@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAN LAB Custom Conversions | Camper Conversions & Elevating Roofs, Lichfield</title>
+<meta name="description" content="Van Lab Custom Conversions. Bespoke van conversions from a Lichfield workshop. Full campers, elevating roofs, beds, windows, heaters, leisure electrics and lining. Ten years on VWs and vans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#141518;
+  --panel:#1D1F23;
+  --panel-2:#26292E;
+  --line:#33363C;
+  --off:#EDEBE6;
+  --slate:#8A9098;
+  --slate-deep:#5B6067;
+  --ply:#C9A66B;
+  --ply-soft:rgba(201,166,107,.14);
+  --shadow:0 24px 60px -26px rgba(0,0,0,.75);
+  --radius:16px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);color:var(--off);
+  font-family:'Inter',system-ui,sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding-left:44px;padding-right:44px}
+.eyebrow{
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
+  font-size:.72rem;font-weight:500;color:var(--ply);display:inline-block;margin-bottom:20px;
+}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;max-width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:18px;padding-bottom:18px;padding-left:44px;padding-right:44px;
+  background:rgba(20,21,24,0);transition:background .35s var(--ease),padding .35s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  background:rgba(20,21,24,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);padding-top:11px;padding-bottom:11px;
+}
+/* ply hairline that draws across on scroll */
+.nav::after{
+  content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;
+  background:linear-gradient(90deg,transparent,var(--ply),transparent);
+  transition:width .6s var(--ease);
+}
+.nav.scrolled::after{width:100%}
+.nav__logo img{height:50px;width:auto}
+.nav__links{display:flex;align-items:center;gap:36px}
+.nav__links a{
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;
+  font-size:.82rem;color:var(--off);position:relative;padding-bottom:4px;transition:color .2s var(--ease);
+}
+.nav__links a:not(.nav__cta)::after{
+  content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--ply);transition:width .28s var(--ease);
+}
+.nav__links a:not(.nav__cta):hover{color:var(--ply)}
+.nav__links a:not(.nav__cta):hover::after{width:100%}
+.nav__cta{
+  border:1px solid var(--slate-deep);padding:10px 22px;border-radius:100px;
+  letter-spacing:.1em!important;transition:border-color .25s var(--ease),color .25s var(--ease),background .25s var(--ease);
+}
+.nav__cta:hover{border-color:var(--ply);color:var(--ply)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:110}
+.burger span{display:block;width:26px;height:2px;background:var(--off);transition:transform .3s var(--ease),opacity .3s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- HERO (contained) ---------- */
+.hero{padding-top:150px;padding-bottom:90px}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero__copy .eyebrow{opacity:0;transform:translateY(12px);animation:rise .7s var(--ease) .1s forwards}
+.hero h1{font-size:clamp(3rem,6.5vw,5.6rem);opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .22s forwards}
+.hero__sub{
+  margin-top:24px;max-width:44ch;font-size:1.12rem;color:var(--slate);
+  opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .34s forwards;
+}
+.hero__actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .46s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero__media{position:relative;opacity:0;transform:translateY(20px) scale(.98);animation:rise .9s var(--ease) .3s forwards}
+.hero__media img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)}
+.hero__media .stamp{
+  position:absolute;left:22px;bottom:22px;
+  background:rgba(20,21,24,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(201,166,107,.4);border-radius:100px;padding:8px 16px;
+  font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:.06em;
+}
+.hero__media .stamp b{color:var(--ply);font-weight:600}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:.9rem;font-weight:500;
+  cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease);
+}
+.btn--primary{background:var(--off);color:var(--black);box-shadow:0 12px 30px -14px rgba(237,235,230,.4)}
+.btn--primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px -14px rgba(237,235,230,.5)}
+.btn--ghost{background:transparent;color:var(--off);border:1px solid var(--slate-deep)}
+.btn--ghost:hover{transform:translateY(-3px);border-color:var(--ply);color:var(--ply)}
+
+/* trust bar */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.trust__row{display:flex;justify-content:space-between;gap:20px;padding-top:26px;padding-bottom:26px;flex-wrap:wrap}
+.trust__item{display:flex;flex-direction:column;gap:2px}
+.trust__item b{font-family:'Oswald',sans-serif;font-weight:500;font-size:1.5rem;letter-spacing:.01em;color:var(--off);line-height:1.1}
+.trust__item span{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--slate)}
+
+/* ---------- SECTION ---------- */
+section{position:relative}
+.section{padding-top:120px;padding-bottom:120px}
+.section__head{max-width:56ch}
+.section__head h2{font-size:clamp(2.1rem,4.6vw,3.5rem)}
+.section__head p{margin-top:20px;color:var(--slate);font-size:1.08rem}
+
+/* ---------- ABOUT ---------- */
+.about{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about__grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.about__media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.about__media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.about h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+.about__lead{margin-top:22px;color:#D2D0CB;font-size:1.12rem}
+.about__list{margin-top:32px;display:flex;flex-direction:column;gap:22px}
+.about__item{display:flex;gap:16px}
+.about__item .dot{flex:0 0 auto;width:10px;height:10px;margin-top:9px;border-radius:100px;background:var(--ply)}
+.about__item h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:1rem;font-weight:600;margin-bottom:3px}
+.about__item p{color:var(--slate);font-size:.96rem}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--black)}
+.svc-grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding-top:34px;padding-bottom:34px;padding-left:32px;padding-right:32px;
+  transition:transform .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(201,166,107,.42);box-shadow:var(--shadow)}
+.card h3{font-size:1.3rem;margin-bottom:12px}
+.card h3 .mark{display:block;width:26px;height:2px;background:var(--ply);margin-bottom:16px;transition:width .3s var(--ease)}
+.card:hover h3 .mark{width:44px}
+.card p{color:var(--slate);font-size:.96rem}
+
+/* ---------- GALLERY ---------- */
+.gallery{background:var(--black)}
+.gal-grid{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal-item{
+  display:block;position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line);
+  aspect-ratio:1/1;
+}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,21,24,.5));opacity:0;transition:opacity .3s var(--ease)}
+.gal-item:hover::after{opacity:1}
+.gal-more{text-align:center;margin-top:40px}
+
+/* ---------- AREAS ---------- */
+.areas{background:var(--panel);border-top:1px solid var(--line);text-align:center}
+.areas h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+.tags{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:880px;margin-left:auto;margin-right:auto}
+.tag{
+  padding:9px 20px;border-radius:100px;border:1px solid var(--line);background:var(--black);
+  font-family:'Oswald',sans-serif;letter-spacing:.05em;font-size:.9rem;color:#C7C9CB;
+  transition:border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease);
+}
+.tag:hover{border-color:var(--ply);color:var(--ply);transform:translateY(-2px)}
+
+/* ---------- REVIEWS ---------- */
+.reviews{background:var(--black)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.rev-score{display:flex;align-items:center;gap:16px}
+.rev-score .big{font-family:'Anton',sans-serif;font-size:3.2rem;color:var(--ply);line-height:1}
+.rev-score .meta{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:var(--slate)}
+.rev-score .meta strong{color:var(--off);display:block;font-size:1rem}
+.rev-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+.rev__stars{color:var(--ply);letter-spacing:3px;font-size:.9rem;margin-bottom:14px}
+.rev__body{color:#D2D0CB;font-size:.98rem;flex:1}
+.rev__name{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:var(--off)}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--panel);border-top:1px solid var(--line)}
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact h2{font-size:clamp(2rem,4vw,3rem)}
+.contact__lead{margin-top:20px;color:var(--slate);max-width:42ch;font-size:1.06rem}
+.contact__rows{margin-top:34px;display:flex;flex-direction:column;gap:22px}
+.crow{display:flex;gap:16px;align-items:flex-start}
+.crow .ci{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--ply-soft);border:1px solid rgba(201,166,107,.5);display:grid;place-items:center;color:var(--ply)}
+.crow .ci svg{width:20px;height:20px}
+.crow h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--slate);margin-bottom:3px}
+.crow a,.crow p{font-size:1.05rem;color:var(--off)}
+.crow a:hover{color:var(--ply)}
+.contact__cta{
+  background:var(--black);border:1px solid var(--line);border-radius:var(--radius);
+  padding:40px 38px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);
+}
+.contact__cta h3{font-size:1.6rem;margin-bottom:10px}
+.contact__cta p{color:var(--slate);margin-bottom:26px}
+.contact__cta .btn{justify-content:center}
+.contact__cta .btn+.btn{margin-top:12px}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--black);color:var(--off);border-top:1px solid var(--line);padding-top:50px;padding-bottom:44px}
+.footer__grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer__logo img{height:46px;opacity:.9}
+.footer__meta{color:var(--slate);font-size:.86rem;text-align:right}
+.footer__meta a{color:var(--off);font-weight:500}
+.footer__meta a:hover{color:var(--ply)}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:980px){
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .hero__media{order:-1}
+  .about__grid{grid-template-columns:1fr;gap:40px}
+  .contact__grid{grid-template-columns:1fr;gap:40px}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+  .wrap{padding-left:22px;padding-right:22px}
+  .nav{padding-left:22px;padding-right:22px}
+  .nav__links{
+    position:fixed;top:0;right:0;height:100vh;width:min(78vw,320px);
+    flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;
+    background:rgba(20,21,24,.98);backdrop-filter:blur(16px);padding-left:38px;padding-right:38px;
+    transform:translateX(100%);transition:transform .35s var(--ease);border-left:1px solid var(--line);
+  }
+  .nav__links.open{transform:translateX(0)}
+  .nav__links a{font-size:1.05rem}
+  .burger{display:flex}
+  .svc-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .section{padding-top:80px;padding-bottom:80px}
+  .footer__grid{flex-direction:column;text-align:center}
+  .footer__meta{text-align:center}
+  .nav__logo img{height:44px}
+  .trust__row{gap:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.hero__copy .eyebrow,.hero h1,.hero__sub,.hero__actions,.hero__media{opacity:1!important;transform:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav__logo" href="#top" aria-label="Van Lab home"><img src="images/logo.png" alt="Van Lab Custom Conversions"></a>
+  <div class="nav__links" id="navlinks">
+    <a href="#services">Services</a>
+    <a href="#work">Our work</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact" class="nav__cta">Get a quote</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <span class="eyebrow">Custom van conversions · Lichfield</span>
+      <h1>Vans, built<br>properly.</h1>
+      <p class="hero__sub">Full campers, elevating roofs, or a single job done right. Ten years on VWs and vans, from one workshop in Lichfield.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Start your build</a>
+        <a href="#work" class="btn btn--ghost">See recent work</a>
+      </div>
+    </div>
+    <div class="hero__media">
+      <img src="images/exterior-roof-up-forest.jpg" alt="Ford Transit Custom camper with the elevating roof raised">
+      <div class="stamp"><b>100%</b> recommended · 43 reviews</div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="wrap trust__row">
+    <div class="trust__item"><b>Est. 2015</b><span>Ten years converting vans</span></div>
+    <div class="trust__item"><b>100%</b><span>Recommended on Facebook</span></div>
+    <div class="trust__item"><b>VW &amp; more</b><span>Transporter, Caddy, Transit, Vivaro</span></div>
+    <div class="trust__item"><b>Lichfield</b><span>Serving the Midlands</span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">What we build</span>
+      <h2>From a bare shell to a finished camper</h2>
+      <p>Or one job on its own. Here is the work that comes through the workshop.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal"><h3><span class="mark"></span>Camper conversions</h3><p>Complete builds. Units, seating, bed, worktop and electrics, spec'd around how you'll actually use the van.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Elevating roofs</h3><p>Pop-top and elevating roofs with the sleeping deck built in. A standard-height van becomes a four berth without losing the drive.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Beds &amp; seating</h3><p>Crash-tested rock and roll beds, seat conversions and day-van set-ups, fitted and trimmed to match the interior.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Leisure electrics</h3><p>DC to DC charging, leisure batteries, fuse boards and 12V or 240V hook-ups, wired in clean and safe.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Windows &amp; heaters</h3><p>Side and rear-door glass, plus diesel night heaters. Often done same day while you wait.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Lining &amp; starlight</h3><p>Ply lining, full carpet lining, headliner retrims and fibre-optic starlight roofs for the finishing touch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery section" id="work">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Our work</span>
+      <h2>Recent work</h2>
+      <p>A few of the vans that have been through the workshop lately.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/exterior-front-studio.jpg" alt="Grey Ford Transit Custom camper, front three-quarter"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/interior-kitchen-seats.jpg" alt="Finished camper interior with kitchen units and tartan seating"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/poptop-interior-bed.jpg" alt="Pop-top roof interior with upper sleeping deck"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/starlight-headliner.jpg" alt="Fibre-optic starlight headliner"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/interior-bed-mode.jpg" alt="Rock and roll bed folded flat in tartan trim"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/leisure-electrics.jpg" alt="Leisure electrics, DC to DC charger and fuse board"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/exterior-rear-studio.jpg" alt="Rear of Transit Custom with elevating roof"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/rear-storage-drawers.jpg" alt="Rear slide-out storage drawers in ply"></a>
+    </div>
+    <div class="gal-more reveal">
+      <a href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener" class="btn btn--ghost">View more on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+  <div class="wrap about__grid">
+    <div class="about__media reveal"><img src="images/interior-kitchen-wide.jpg" alt="Finished camper interior, kitchen and bench seating"></div>
+    <div class="reveal">
+      <span class="eyebrow">About Van Lab</span>
+      <h2>Ten years, one workshop, no shortcuts</h2>
+      <p class="about__lead">Van Lab has been converting vans in Lichfield since 2015, most of them Volkswagens. The approach is simple. We ask how you'll use the van, then build to that.</p>
+      <div class="about__list">
+        <div class="about__item"><div class="dot"></div><div><h4>Honest advice first</h4><p>If a simpler spec suits you better, we'll say so, and save you money on things you'd never use.</p></div></div>
+        <div class="about__item"><div class="dot"></div><div><h4>Workmanship you can see</h4><p>Clean wiring, tidy trims, proper lining. The details are the job, not an afterthought.</p></div></div>
+        <div class="about__item"><div class="dot"></div><div><h4>Worth the drive</h4><p>People travel from as far as Scotland for the work.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas section">
+  <div class="wrap">
+    <span class="eyebrow">Where we work</span>
+    <h2>Lichfield workshop, serving the Midlands</h2>
+    <div class="tags">
+      <span class="tag">Lichfield</span><span class="tag">Tamworth</span><span class="tag">Cannock</span>
+      <span class="tag">Walsall</span><span class="tag">Sutton Coldfield</span><span class="tag">Birmingham</span>
+      <span class="tag">Wolverhampton</span><span class="tag">Burton upon Trent</span><span class="tag">Stafford</span>
+      <span class="tag">Staffordshire</span><span class="tag">West Midlands</span><span class="tag">Further afield on request</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews section" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="section__head"><span class="eyebrow">What customers say</span><h2>100% recommend us</h2></div>
+      <div class="rev-score"><div class="big">100%</div><div class="meta"><strong>43 reviews</strong>on Facebook</div></div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="rev__stars">★★★★★</div><p class="rev__body">"I can highly recommend Van Lab. Nathan and his team are very professional and helpful. I was asked how I intended to use the camper and we arrived at a day-van set-up that was more beneficial to me, saving money on stuff I wouldn't use. Genuine people, which is becoming harder to come by."</p><div class="rev__name">Christian Nash</div></div>
+      <div class="rev reveal"><div class="rev__stars">★★★★★</div><p class="rev__body">"Travelled down from Scotland to Van Lab after doing some research. Glad I did. Nathan and the boys completed a rear seat conversion on my VW Caddy. Great service and workmanship."</p><div class="rev__name">Mark Robertson</div></div>
+      <div class="rev reveal"><div class="rev__stars">★★★★★</div><p class="rev__body">"Contacted Van Lab to fit a diesel heater in my Vauxhall Vivaro. Despite my limited timescale they fitted me in. Dropped it at 9.30, they rang at 1pm to say almost done. Tank dropped, drop pipe fitted, heater in under the seat. Spot on."</p><div class="rev__name">Gareth Williams</div></div>
+      <div class="rev reveal"><div class="rev__stars">★★★★★</div><p class="rev__body">"Extremely happy with what Van Lab have done to my T5. It looks amazing and the quality of work is second to none. Great prices and great service. Highly recommend to anyone looking to change the look of their van."</p><div class="rev__name">Stuart Maddox</div></div>
+      <div class="rev reveal"><div class="rev__stars">★★★★★</div><p class="rev__body">"Dropped the van off on Friday and picked up Sunday morning. Amazing work and to a much higher standard than I expected. Would recommend to anyone."</p><div class="rev__name">Jake Cox</div></div>
+      <div class="rev reveal"><div class="rev__stars">★★★★★</div><p class="rev__body">"Had my headlining retrimmed. Replied in seconds and got the job done the next day. Good quality carpet, looks brilliant."</p><div class="rev__name">Lewis Banks</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <div class="wrap contact__grid">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Tell us about your van</h2>
+      <p class="contact__lead">Give us the van and what you're after. You'll get honest advice and a straight price.</p>
+      <div class="contact__rows">
+        <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Phone</h4><a href="tel:07761351532">07761 351532</a></div></div>
+        <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div><h4>Email</h4><a href="mailto:nathan@van-lab.co.uk">nathan@van-lab.co.uk</a></div></div>
+        <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Workshop</h4><p>Unit 18, Crossfield Industrial Estate, Crossfield Road, Lichfield, WS13 6RJ</p></div></div>
+      </div>
+    </div>
+    <div class="contact__cta reveal">
+      <h3>Ready when you are</h3>
+      <p>The quickest way to start is a call or a message on Facebook. Nathan usually replies fast.</p>
+      <a href="tel:07761351532" class="btn btn--primary">Call 07761 351532</a>
+      <a href="https://www.facebook.com/VANLABCC/" target="_blank" rel="noopener" class="btn btn--ghost">Message on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__logo"><img src="images/logo.png" alt="Van Lab Custom Conversions"></div>
+    <div class="footer__meta">Van Lab Custom Conversions · Est. 2015 · Lichfield, WS13 6RJ<br><a href="tel:07761351532">07761 351532</a> · <a href="mailto:nathan@van-lab.co.uk">nathan@van-lab.co.uk</a></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+burger.addEventListener('click',()=>{const o=links.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
