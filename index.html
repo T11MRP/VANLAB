@@ -5,6 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VAN LAB Custom Conversions | Camper Conversions & Elevating Roofs, Lichfield</title>
 <meta name="description" content="Van Lab Custom Conversions. Bespoke van conversions from a Lichfield workshop. Full campers, elevating roofs, beds, windows, heaters, leisure electrics and lining. Ten years on VWs and vans.">
+<meta name="theme-color" content="#141518">
+<!-- Favicons -->
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Share preview (Facebook, WhatsApp, etc). Confirm the live domain before launch: van-lab.co.uk assumed from Nathan's email -->
+<link rel="canonical" href="https://van-lab.co.uk/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Van Lab Custom Conversions">
+<meta property="og:title" content="VAN LAB Custom Conversions | Camper Conversions &amp; Elevating Roofs, Lichfield">
+<meta property="og:description" content="Bespoke van conversions from a Lichfield workshop. Full campers, elevating roofs, beds, windows, heaters, leisure electrics and lining.">
+<meta property="og:url" content="https://van-lab.co.uk/">
+<meta property="og:image" content="https://van-lab.co.uk/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Van Lab Custom Conversions logo over a finished camper interior">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Business details for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Van Lab Custom Conversions",
+  "url": "https://van-lab.co.uk/",
+  "logo": "https://van-lab.co.uk/images/logo.png",
+  "image": "https://van-lab.co.uk/images/og-image.jpg",
+  "description": "Bespoke van conversions from a Lichfield workshop. Full campers, elevating roofs, beds, windows, heaters, leisure electrics and lining.",
+  "telephone": "+447761351532",
+  "email": "nathan@van-lab.co.uk",
+  "foundingDate": "2015",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 18, Crossfield Industrial Estate, Crossfield Road",
+    "addressLocality": "Lichfield",
+    "addressRegion": "Staffordshire",
+    "postalCode": "WS13 6RJ",
+    "addressCountry": "GB"
+  },
+  "hasMap": "https://www.google.com/maps?q=Unit+18+Crossfield+Industrial+Estate,+Crossfield+Road,+Lichfield+WS13+6RJ",
+  "areaServed": ["Lichfield","Tamworth","Cannock","Walsall","Sutton Coldfield","Birmingham","Wolverhampton","Burton upon Trent","Stafford","Staffordshire","West Midlands"],
+  "sameAs": ["https://www.facebook.com/VANLABCC/"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
@@ -31,7 +76,7 @@ body{
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:1;letter-spacing:.01em}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding-left:44px;padding-right:44px}
 .eyebrow{
@@ -151,6 +196,24 @@ section{position:relative}
 .card:hover h3 .mark{width:44px}
 .card p{color:var(--slate);font-size:.96rem}
 
+/* ---------- MAP ---------- */
+.map{
+  position:relative;margin-top:64px;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow);height:380px;background:var(--black);
+}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.map__link{position:absolute;inset:0;z-index:2}
+.map__pill{
+  position:absolute;left:22px;bottom:22px;z-index:3;pointer-events:none;
+  background:rgba(20,21,24,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(201,166,107,.45);border-radius:100px;padding:10px 18px;
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:var(--off);
+  display:inline-flex;align-items:center;gap:8px;transition:border-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease);
+}
+.map__pill svg{width:15px;height:15px;color:var(--ply)}
+.map:hover .map__pill{border-color:var(--ply);color:var(--ply);transform:translateY(-2px)}
+.map__link:focus-visible{outline:2px solid var(--ply);outline-offset:-4px;border-radius:var(--radius)}
+
 /* ---------- GALLERY ---------- */
 .gallery{background:var(--black)}
 .gal-grid{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -163,6 +226,28 @@ section{position:relative}
 .gal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,21,24,.5));opacity:0;transition:opacity .3s var(--ease)}
 .gal-item:hover::after{opacity:1}
 .gal-more{text-align:center;margin-top:40px}
+
+/* ---------- FEATURED BUILD ---------- */
+.feature{background:var(--black);padding-top:0}
+.feature__card{
+  display:grid;grid-template-columns:1.1fr .9fr;border-radius:var(--radius);overflow:hidden;
+  background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);
+  transition:border-color .3s var(--ease),transform .3s var(--ease);
+}
+.feature__card:hover{border-color:rgba(201,166,107,.42)}
+.feature__media{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:4px;background:var(--black);min-height:480px}
+.feature__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.feature__media a{display:block;overflow:hidden;position:relative}
+.feature__media a:hover img{transform:scale(1.05)}
+.feature__media .stack{display:grid;grid-template-rows:1fr 1fr;gap:4px}
+.feature__body{padding-top:48px;padding-bottom:48px;padding-left:46px;padding-right:46px;display:flex;flex-direction:column;justify-content:center}
+.feature__body h2{font-size:clamp(2rem,3.8vw,2.9rem)}
+.feature__body p{margin-top:18px;color:var(--slate);font-size:1.04rem}
+.chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:7px 15px;border-radius:100px;border:1px solid var(--line);background:var(--black);font-family:'Oswald',sans-serif;letter-spacing:.05em;font-size:.84rem;color:#C7C9CB}
+.feature__body .btn{margin-top:32px;align-self:flex-start}
+.card__more{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:.76rem;color:var(--ply);transition:gap .2s var(--ease)}
+.card__more:hover{gap:12px}
 
 /* ---------- AREAS ---------- */
 .areas{background:var(--panel);border-top:1px solid var(--line);text-align:center}
@@ -212,7 +297,7 @@ section{position:relative}
 /* ---------- FOOTER ---------- */
 .footer{background:var(--black);color:var(--off);border-top:1px solid var(--line);padding-top:50px;padding-bottom:44px}
 .footer__grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.footer__logo img{height:46px;opacity:.9}
+.footer__logo img{height:46px;width:auto;opacity:.9}
 .footer__meta{color:var(--slate);font-size:.86rem;text-align:right}
 .footer__meta a{color:var(--off);font-weight:500}
 .footer__meta a:hover{color:var(--ply)}
@@ -230,6 +315,8 @@ section{position:relative}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .rev-grid{grid-template-columns:1fr 1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .feature__card{grid-template-columns:1fr}
+  .feature__media{aspect-ratio:16/11;min-height:0}
 }
 @media(max-width:720px){
   .wrap{padding-left:22px;padding-right:22px}
@@ -250,6 +337,9 @@ section{position:relative}
   .footer__meta{text-align:center}
   .nav__logo img{height:44px}
   .trust__row{gap:24px}
+  .map{height:300px;margin-top:48px}
+  .feature__body{padding-top:34px;padding-bottom:36px;padding-left:26px;padding-right:26px}
+  .feature__media{aspect-ratio:4/3}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -262,7 +352,7 @@ section{position:relative}
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <a class="nav__logo" href="#top" aria-label="Van Lab home"><img src="images/logo.png" alt="Van Lab Custom Conversions"></a>
+  <a class="nav__logo" href="#top" aria-label="Van Lab home"><img src="images/logo.png" alt="Van Lab Custom Conversions" width="340" height="251"></a>
   <div class="nav__links" id="navlinks">
     <a href="#services">Services</a>
     <a href="#work">Our work</a>
@@ -286,7 +376,7 @@ section{position:relative}
       </div>
     </div>
     <div class="hero__media">
-      <img src="images/exterior-roof-up-forest.jpg" alt="Ford Transit Custom camper with the elevating roof raised">
+      <img src="images/exterior-roof-up-forest.jpg" width="1000" height="1000" fetchpriority="high" alt="Ford Transit Custom camper with the elevating roof raised">
       <div class="stamp"><b>100%</b> recommended · 43 reviews</div>
     </div>
   </div>
@@ -314,9 +404,9 @@ section{position:relative}
       <div class="card reveal"><h3><span class="mark"></span>Camper conversions</h3><p>Complete builds. Units, seating, bed, worktop and electrics, spec'd around how you'll actually use the van.</p></div>
       <div class="card reveal"><h3><span class="mark"></span>Elevating roofs</h3><p>Pop-top and elevating roofs with the sleeping deck built in. A standard-height van becomes a four berth without losing the drive.</p></div>
       <div class="card reveal"><h3><span class="mark"></span>Beds &amp; seating</h3><p>Crash-tested rock and roll beds, seat conversions and day-van set-ups, fitted and trimmed to match the interior.</p></div>
-      <div class="card reveal"><h3><span class="mark"></span>Leisure electrics</h3><p>DC to DC charging, leisure batteries, fuse boards and 12V or 240V hook-ups, wired in clean and safe.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Leisure electrics</h3><p>DC to DC charging, leisure batteries, fuse boards and 12V or 240V hook-ups, wired in clean and safe.</p><a class="card__more" href="vw-caddy-build.html#electrics">See an install <span aria-hidden="true">→</span></a></div>
       <div class="card reveal"><h3><span class="mark"></span>Windows &amp; heaters</h3><p>Side and rear-door glass, plus diesel night heaters. Often done same day while you wait.</p></div>
-      <div class="card reveal"><h3><span class="mark"></span>Lining &amp; starlight</h3><p>Ply lining, full carpet lining, headliner retrims and fibre-optic starlight roofs for the finishing touch.</p></div>
+      <div class="card reveal"><h3><span class="mark"></span>Lining &amp; starlight</h3><p>Ply lining, full carpet lining, headliner retrims and fibre optic starlight roofs for the finishing touch.</p><a class="card__more" href="vw-caddy-build.html">See a Caddy we lined <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </section>
@@ -330,14 +420,14 @@ section{position:relative}
       <p>A few of the vans that have been through the workshop lately.</p>
     </div>
     <div class="gal-grid reveal">
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/exterior-front-studio.jpg" alt="Grey Ford Transit Custom camper, front three-quarter"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/interior-kitchen-seats.jpg" alt="Finished camper interior with kitchen units and tartan seating"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/poptop-interior-bed.jpg" alt="Pop-top roof interior with upper sleeping deck"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/starlight-headliner.jpg" alt="Fibre-optic starlight headliner"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/interior-bed-mode.jpg" alt="Rock and roll bed folded flat in tartan trim"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/leisure-electrics.jpg" alt="Leisure electrics, DC to DC charger and fuse board"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/exterior-rear-studio.jpg" alt="Rear of Transit Custom with elevating roof"></a>
-      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/rear-storage-drawers.jpg" alt="Rear slide-out storage drawers in ply"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/exterior-front-studio.jpg" width="720" height="720" loading="lazy" decoding="async" alt="Grey Ford Transit Custom camper, front three-quarter"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/interior-kitchen-seats.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Finished camper interior with kitchen units and tartan seating"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/poptop-interior-bed.jpg" width="720" height="720" loading="lazy" decoding="async" alt="Pop-top roof interior with upper sleeping deck"></a>
+      <a class="gal-item" href="vw-caddy-build.html"><img src="images/caddy-cab-seats-starlight-spotlights.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Fibre optic starlight roof and spotlights over the cab of a VW Caddy"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/interior-bed-mode.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Rock and roll bed folded flat in tartan trim"></a>
+      <a class="gal-item" href="vw-caddy-build.html#electrics"><img src="images/caddy-renogy-under-seat.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Renogy 40A DC to DC charger installed in a VW Caddy"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/exterior-rear-studio.jpg" width="720" height="720" loading="lazy" decoding="async" alt="Rear of Transit Custom with elevating roof"></a>
+      <a class="gal-item" href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener"><img src="images/rear-storage-drawers.jpg" width="720" height="720" loading="lazy" decoding="async" alt="Rear slide-out storage drawers in ply"></a>
     </div>
     <div class="gal-more reveal">
       <a href="https://www.facebook.com/VANLABCC/photos" target="_blank" rel="noopener" class="btn btn--ghost">View more on Facebook</a>
@@ -345,10 +435,32 @@ section{position:relative}
   </div>
 </section>
 
+<!-- FEATURED BUILD -->
+<section class="feature section" aria-labelledby="feature-h">
+  <div class="wrap">
+    <div class="feature__card reveal">
+      <div class="feature__media">
+        <a class="main" href="vw-caddy-build.html" tabindex="-1" aria-hidden="true"><img src="images/caddy-load-area-starlight-full.jpg" width="960" height="1280" loading="lazy" decoding="async" alt=""></a>
+        <div class="stack">
+          <a href="vw-caddy-build.html" tabindex="-1" aria-hidden="true"><img src="images/caddy-starlight-roof-to-cab.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt=""></a>
+          <a href="vw-caddy-build.html#electrics" tabindex="-1" aria-hidden="true"><img src="images/caddy-switch-panel-closeup.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt=""></a>
+        </div>
+      </div>
+      <div class="feature__body">
+        <span class="eyebrow">Featured build</span>
+        <h2 id="feature-h">VW Caddy, lined and lit</h2>
+        <p>A bare Caddy panel van, carpet lined throughout with a starlight roof, a suede cab and Renogy leisure electrics running 240V, 12V and USB in the back.</p>
+        <div class="chips"><span class="chip">Carpet lining</span><span class="chip">Starlight roof</span><span class="chip">Suede cab</span><span class="chip">DC to DC charging</span><span class="chip">240V sockets</span></div>
+        <a href="vw-caddy-build.html" class="btn btn--primary">See the full build</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section class="about section" id="about">
   <div class="wrap about__grid">
-    <div class="about__media reveal"><img src="images/interior-kitchen-wide.jpg" alt="Finished camper interior, kitchen and bench seating"></div>
+    <div class="about__media reveal"><img src="images/interior-kitchen-wide.jpg" width="1000" height="1250" loading="lazy" decoding="async" alt="Finished camper interior, kitchen and bench seating"></div>
     <div class="reveal">
       <span class="eyebrow">About Van Lab</span>
       <h2>Ten years, one workshop, no shortcuts</h2>
@@ -404,7 +516,7 @@ section{position:relative}
       <div class="contact__rows">
         <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Phone</h4><a href="tel:07761351532">07761 351532</a></div></div>
         <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div><h4>Email</h4><a href="mailto:nathan@van-lab.co.uk">nathan@van-lab.co.uk</a></div></div>
-        <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Workshop</h4><p>Unit 18, Crossfield Industrial Estate, Crossfield Road, Lichfield, WS13 6RJ</p></div></div>
+        <div class="crow"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Workshop</h4><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Unit+18+Crossfield+Industrial+Estate%2C+Crossfield+Road%2C+Lichfield+WS13+6RJ" target="_blank" rel="noopener">Unit 18, Crossfield Industrial Estate, Crossfield Road, Lichfield, WS13 6RJ</a></div></div>
       </div>
     </div>
     <div class="contact__cta reveal">
@@ -414,12 +526,20 @@ section{position:relative}
       <a href="https://www.facebook.com/VANLABCC/" target="_blank" rel="noopener" class="btn btn--ghost">Message on Facebook</a>
     </div>
   </div>
+
+  <div class="wrap">
+    <div class="map reveal">
+      <iframe src="https://www.google.com/maps?q=Unit+18+Crossfield+Industrial+Estate,+Crossfield+Road,+Lichfield+WS13+6RJ&amp;z=15&amp;output=embed" title="Map showing the Van Lab workshop in Lichfield" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
+      <a class="map__link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Unit+18+Crossfield+Industrial+Estate%2C+Crossfield+Road%2C+Lichfield+WS13+6RJ" target="_blank" rel="noopener" aria-label="Get directions to the Van Lab workshop in Google Maps"></a>
+      <span class="map__pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Get directions</span>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap footer__grid">
-    <div class="footer__logo"><img src="images/logo.png" alt="Van Lab Custom Conversions"></div>
+    <div class="footer__logo"><img src="images/logo.png" alt="Van Lab Custom Conversions" width="340" height="251" loading="lazy" decoding="async"></div>
     <div class="footer__meta">Van Lab Custom Conversions · Est. 2015 · Lichfield, WS13 6RJ<br><a href="tel:07761351532">07761 351532</a> · <a href="mailto:nathan@van-lab.co.uk">nathan@van-lab.co.uk</a></div>
   </div>
 </footer>

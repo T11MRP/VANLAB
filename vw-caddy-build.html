@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VW Caddy Build: Carpet Lining, Starlight Roof &amp; Leisure Electrics | Van Lab, Lichfield</title>
+<meta name="description" content="A VW Caddy panel van carpet lined, fitted with a fibre optic starlight roof, a black suede cab and Renogy leisure electrics with 240V and 12V power. Built by Van Lab Custom Conversions in Lichfield.">
+<meta name="theme-color" content="#141518">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="canonical" href="https://van-lab.co.uk/vw-caddy-build.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Van Lab Custom Conversions">
+<meta property="og:title" content="VW Caddy build: lining, starlight roof and leisure electrics">
+<meta property="og:description" content="Carpet lined load area, fibre optic starlight roof, black suede cab and Renogy DC to DC charging with 240V and 12V outlets.">
+<meta property="og:url" content="https://van-lab.co.uk/vw-caddy-build.html">
+<meta property="og:image" content="https://van-lab.co.uk/images/caddy-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Starlight roof inside a carpet lined VW Caddy, looking forward to the cab">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#141518;
+  --panel:#1D1F23;
+  --panel-2:#26292E;
+  --line:#33363C;
+  --off:#EDEBE6;
+  --slate:#8A9098;
+  --slate-deep:#5B6067;
+  --ply:#C9A66B;
+  --ply-soft:rgba(201,166,107,.14);
+  --shadow:0 24px 60px -26px rgba(0,0,0,.75);
+  --radius:16px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);color:var(--off);
+  font-family:'Inter',system-ui,sans-serif;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding-left:44px;padding-right:44px}
+.eyebrow{
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
+  font-size:.72rem;font-weight:500;color:var(--ply);display:inline-block;margin-bottom:20px;
+}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;max-width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:18px;padding-bottom:18px;padding-left:44px;padding-right:44px;
+  background:rgba(20,21,24,0);transition:background .35s var(--ease),padding .35s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  background:rgba(20,21,24,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);padding-top:11px;padding-bottom:11px;
+}
+/* ply hairline that draws across on scroll */
+.nav::after{
+  content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;
+  background:linear-gradient(90deg,transparent,var(--ply),transparent);
+  transition:width .6s var(--ease);
+}
+.nav.scrolled::after{width:100%}
+.nav__logo img{height:50px;width:auto}
+.nav__links{display:flex;align-items:center;gap:36px}
+.nav__links a{
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;
+  font-size:.82rem;color:var(--off);position:relative;padding-bottom:4px;transition:color .2s var(--ease);
+}
+.nav__links a:not(.nav__cta)::after{
+  content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--ply);transition:width .28s var(--ease);
+}
+.nav__links a:not(.nav__cta):hover{color:var(--ply)}
+.nav__links a:not(.nav__cta):hover::after{width:100%}
+.nav__cta{
+  border:1px solid var(--slate-deep);padding:10px 22px;border-radius:100px;
+  letter-spacing:.1em!important;transition:border-color .25s var(--ease),color .25s var(--ease),background .25s var(--ease);
+}
+.nav__cta:hover{border-color:var(--ply);color:var(--ply)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:110}
+.burger span{display:block;width:26px;height:2px;background:var(--off);transition:transform .3s var(--ease),opacity .3s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- HERO (contained) ---------- */
+.hero{padding-top:150px;padding-bottom:90px}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero__copy .eyebrow{opacity:0;transform:translateY(12px);animation:rise .7s var(--ease) .1s forwards}
+.hero h1{font-size:clamp(3rem,6.5vw,5.6rem);opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .22s forwards}
+.hero__sub{
+  margin-top:24px;max-width:44ch;font-size:1.12rem;color:var(--slate);
+  opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .34s forwards;
+}
+.hero__actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .46s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero__media{position:relative;opacity:0;transform:translateY(20px) scale(.98);animation:rise .9s var(--ease) .3s forwards}
+.hero__media img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)}
+.hero__media .stamp{
+  position:absolute;left:22px;bottom:22px;
+  background:rgba(20,21,24,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(201,166,107,.4);border-radius:100px;padding:8px 16px;
+  font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:.06em;
+}
+.hero__media .stamp b{color:var(--ply);font-weight:600}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:.9rem;font-weight:500;
+  cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease);
+}
+.btn--primary{background:var(--off);color:var(--black);box-shadow:0 12px 30px -14px rgba(237,235,230,.4)}
+.btn--primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px -14px rgba(237,235,230,.5)}
+.btn--ghost{background:transparent;color:var(--off);border:1px solid var(--slate-deep)}
+.btn--ghost:hover{transform:translateY(-3px);border-color:var(--ply);color:var(--ply)}
+
+/* trust bar */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.trust__row{display:flex;justify-content:space-between;gap:20px;padding-top:26px;padding-bottom:26px;flex-wrap:wrap}
+.trust__item{display:flex;flex-direction:column;gap:2px}
+.trust__item b{font-family:'Oswald',sans-serif;font-weight:500;font-size:1.5rem;letter-spacing:.01em;color:var(--off);line-height:1.1}
+.trust__item span{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--slate)}
+
+/* ---------- SECTION ---------- */
+section{position:relative}
+.section{padding-top:120px;padding-bottom:120px}
+.section__head{max-width:56ch}
+.section__head h2{font-size:clamp(2.1rem,4.6vw,3.5rem)}
+.section__head p{margin-top:20px;color:var(--slate);font-size:1.08rem}
+
+/* ---------- ABOUT ---------- */
+.about{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about__grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.about__media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.about__media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.about h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+.about__lead{margin-top:22px;color:#D2D0CB;font-size:1.12rem}
+.about__list{margin-top:32px;display:flex;flex-direction:column;gap:22px}
+.about__item{display:flex;gap:16px}
+.about__item .dot{flex:0 0 auto;width:10px;height:10px;margin-top:9px;border-radius:100px;background:var(--ply)}
+.about__item h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:1rem;font-weight:600;margin-bottom:3px}
+.about__item p{color:var(--slate);font-size:.96rem}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--black)}
+.svc-grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding-top:34px;padding-bottom:34px;padding-left:32px;padding-right:32px;
+  transition:transform .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(201,166,107,.42);box-shadow:var(--shadow)}
+.card h3{font-size:1.3rem;margin-bottom:12px}
+.card h3 .mark{display:block;width:26px;height:2px;background:var(--ply);margin-bottom:16px;transition:width .3s var(--ease)}
+.card:hover h3 .mark{width:44px}
+.card p{color:var(--slate);font-size:.96rem}
+
+/* ---------- MAP ---------- */
+.map{
+  position:relative;margin-top:64px;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow);height:380px;background:var(--black);
+}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.map__link{position:absolute;inset:0;z-index:2}
+.map__pill{
+  position:absolute;left:22px;bottom:22px;z-index:3;pointer-events:none;
+  background:rgba(20,21,24,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(201,166,107,.45);border-radius:100px;padding:10px 18px;
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:var(--off);
+  display:inline-flex;align-items:center;gap:8px;transition:border-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease);
+}
+.map__pill svg{width:15px;height:15px;color:var(--ply)}
+.map:hover .map__pill{border-color:var(--ply);color:var(--ply);transform:translateY(-2px)}
+.map__link:focus-visible{outline:2px solid var(--ply);outline-offset:-4px;border-radius:var(--radius)}
+
+/* ---------- GALLERY ---------- */
+.gallery{background:var(--black)}
+.gal-grid{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal-item{
+  display:block;position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line);
+  aspect-ratio:1/1;
+}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,21,24,.5));opacity:0;transition:opacity .3s var(--ease)}
+.gal-item:hover::after{opacity:1}
+.gal-more{text-align:center;margin-top:40px}
+
+/* ---------- AREAS ---------- */
+.areas{background:var(--panel);border-top:1px solid var(--line);text-align:center}
+.areas h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+.tags{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:880px;margin-left:auto;margin-right:auto}
+.tag{
+  padding:9px 20px;border-radius:100px;border:1px solid var(--line);background:var(--black);
+  font-family:'Oswald',sans-serif;letter-spacing:.05em;font-size:.9rem;color:#C7C9CB;
+  transition:border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease);
+}
+.tag:hover{border-color:var(--ply);color:var(--ply);transform:translateY(-2px)}
+
+/* ---------- REVIEWS ---------- */
+.reviews{background:var(--black)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.rev-score{display:flex;align-items:center;gap:16px}
+.rev-score .big{font-family:'Anton',sans-serif;font-size:3.2rem;color:var(--ply);line-height:1}
+.rev-score .meta{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:var(--slate)}
+.rev-score .meta strong{color:var(--off);display:block;font-size:1rem}
+.rev-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+.rev__stars{color:var(--ply);letter-spacing:3px;font-size:.9rem;margin-bottom:14px}
+.rev__body{color:#D2D0CB;font-size:.98rem;flex:1}
+.rev__name{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:var(--off)}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--panel);border-top:1px solid var(--line)}
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact h2{font-size:clamp(2rem,4vw,3rem)}
+.contact__lead{margin-top:20px;color:var(--slate);max-width:42ch;font-size:1.06rem}
+.contact__rows{margin-top:34px;display:flex;flex-direction:column;gap:22px}
+.crow{display:flex;gap:16px;align-items:flex-start}
+.crow .ci{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--ply-soft);border:1px solid rgba(201,166,107,.5);display:grid;place-items:center;color:var(--ply)}
+.crow .ci svg{width:20px;height:20px}
+.crow h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--slate);margin-bottom:3px}
+.crow a,.crow p{font-size:1.05rem;color:var(--off)}
+.crow a:hover{color:var(--ply)}
+.contact__cta{
+  background:var(--black);border:1px solid var(--line);border-radius:var(--radius);
+  padding:40px 38px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);
+}
+.contact__cta h3{font-size:1.6rem;margin-bottom:10px}
+.contact__cta p{color:var(--slate);margin-bottom:26px}
+.contact__cta .btn{justify-content:center}
+.contact__cta .btn+.btn{margin-top:12px}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--black);color:var(--off);border-top:1px solid var(--line);padding-top:50px;padding-bottom:44px}
+.footer__grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer__logo img{height:46px;width:auto;opacity:.9}
+.footer__meta{color:var(--slate);font-size:.86rem;text-align:right}
+.footer__meta a{color:var(--off);font-weight:500}
+.footer__meta a:hover{color:var(--ply)}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:980px){
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .hero__media{order:-1}
+  .about__grid{grid-template-columns:1fr;gap:40px}
+  .contact__grid{grid-template-columns:1fr;gap:40px}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+  .wrap{padding-left:22px;padding-right:22px}
+  .nav{padding-left:22px;padding-right:22px}
+  .nav__links{
+    position:fixed;top:0;right:0;height:100vh;width:min(78vw,320px);
+    flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;
+    background:rgba(20,21,24,.98);backdrop-filter:blur(16px);padding-left:38px;padding-right:38px;
+    transform:translateX(100%);transition:transform .35s var(--ease);border-left:1px solid var(--line);
+  }
+  .nav__links.open{transform:translateX(0)}
+  .nav__links a{font-size:1.05rem}
+  .burger{display:flex}
+  .svc-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .section{padding-top:80px;padding-bottom:80px}
+  .footer__grid{flex-direction:column;text-align:center}
+  .footer__meta{text-align:center}
+  .nav__logo img{height:44px}
+  .trust__row{gap:24px}
+  .map{height:300px;margin-top:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.hero__copy .eyebrow,.hero h1,.hero__sub,.hero__actions,.hero__media{opacity:1!important;transform:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- CASE STUDY ---------- */
+.crumb{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;color:var(--slate);margin-bottom:22px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.crumb a{color:var(--slate);transition:color .2s var(--ease)}
+.crumb a:hover{color:var(--ply)}
+.crumb span[aria-hidden]{color:var(--slate-deep)}
+.cs-hero{padding-top:140px;padding-bottom:80px}
+.cs-hero .hero__media img{aspect-ratio:3/2}
+.zoom{display:block;position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);cursor:zoom-in;background:var(--panel)}
+.zoom img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.zoom:hover img{transform:scale(1.04)}
+.zoom:focus-visible{outline:2px solid var(--ply);outline-offset:3px}
+.zoom .zoom__hint{
+  position:absolute;right:14px;top:14px;width:36px;height:36px;border-radius:100px;display:grid;place-items:center;
+  background:rgba(20,21,24,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(201,166,107,.4);
+  color:var(--off);opacity:0;transform:translateY(-4px);transition:opacity .25s var(--ease),transform .25s var(--ease);
+}
+.zoom .zoom__hint svg{width:16px;height:16px}
+.zoom:hover .zoom__hint,.zoom:focus-visible .zoom__hint{opacity:1;transform:none}
+.cs-hero .hero__media .zoom{box-shadow:var(--shadow)}
+.cs-hero .hero__media .zoom img{border:0;border-radius:0;box-shadow:none}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+
+/* chapters */
+.chapter{padding-top:110px;padding-bottom:110px}
+.chapter + .chapter{padding-top:0}
+.chapter__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.chapter--flip .chapter__copy{order:2}
+.chapter__num{font-family:'Anton',sans-serif;font-size:1rem;color:var(--ply);letter-spacing:.08em;display:block;margin-bottom:14px}
+.chapter h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+.chapter__copy p{margin-top:20px;color:#D2D0CB;font-size:1.06rem;max-width:48ch}
+.chapter__copy p + p{margin-top:14px;color:var(--slate);font-size:1rem}
+.ticks{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.ticks li{list-style:none;display:flex;gap:14px;color:var(--off);font-size:.98rem}
+.ticks li::before{content:"";flex:0 0 auto;width:8px;height:8px;margin-top:9px;border-radius:100px;background:var(--ply)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shots .zoom.tall{grid-row:span 2}
+.shots .zoom img{aspect-ratio:3/4}
+.shots .zoom.wide{grid-column:span 2}
+.shots .zoom.wide img{aspect-ratio:3/2}
+.shots--pair .zoom img{aspect-ratio:3/4}
+
+/* electrics spec */
+.spec{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spec__intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+.spec__intro h2{font-size:clamp(2.1rem,4.6vw,3.5rem)}
+.spec__intro p{color:var(--slate);font-size:1.06rem}
+.spec-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.spec-card{background:var(--black)}
+.spec-card .brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--ply);display:block;margin-bottom:8px}
+.spec-card h3{font-size:1.25rem;margin-bottom:12px}
+.spec-card ul{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.spec-card li{list-style:none;color:var(--slate);font-size:.93rem;padding-left:18px;position:relative}
+.spec-card li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1.5px;background:var(--ply)}
+.spec-card--feature{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.spec-card--feature .zoom img{aspect-ratio:3/2}
+.spec-thumb{margin-bottom:22px;border-radius:12px}
+.spec-thumb img{aspect-ratio:16/10}
+.spec-note{margin-top:34px;color:var(--slate);font-size:.95rem;max-width:70ch}
+
+/* full gallery */
+.cs-gal{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cs-gal .zoom{border-radius:12px}
+.cs-gal .zoom img{aspect-ratio:1/1}
+
+/* cta */
+.cs-cta{background:var(--panel);border-top:1px solid var(--line)}
+.cs-cta__box{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.cs-cta h2{font-size:clamp(2rem,4vw,3rem)}
+.cs-cta p{margin-top:18px;color:var(--slate);font-size:1.06rem;max-width:46ch}
+.cs-cta__actions{display:flex;flex-direction:column;gap:12px}
+.cs-cta__actions .btn{justify-content:center}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,11,13,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.lb.open{opacity:1;visibility:visible}
+.lb__figure{margin:0;max-width:min(92vw,1400px);display:flex;flex-direction:column;align-items:center;gap:16px}
+.lb__img{max-width:100%;max-height:80vh;width:auto;height:auto;border-radius:12px;box-shadow:0 30px 80px -30px rgba(0,0,0,.9);
+  transform:scale(.97);transition:transform .35s var(--ease)}
+.lb.open .lb__img{transform:none}
+.lb__cap{font-family:'Oswald',sans-serif;letter-spacing:.05em;font-size:.95rem;color:#D2D0CB;text-align:center;max-width:60ch;padding-left:16px;padding-right:16px}
+.lb__count{color:var(--ply);margin-right:10px}
+.lb__btn{position:absolute;width:52px;height:52px;border-radius:100px;border:1px solid var(--slate-deep);background:rgba(20,21,24,.6);color:var(--off);
+  display:grid;place-items:center;cursor:pointer;transition:border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.lb__btn:hover{border-color:var(--ply);color:var(--ply)}
+.lb__btn svg{width:22px;height:22px}
+.lb__btn:focus-visible{outline:2px solid var(--ply);outline-offset:3px}
+.lb__close{top:22px;right:22px}
+.lb__prev{left:22px;top:50%;margin-top:-26px}
+.lb__next{right:22px;top:50%;margin-top:-26px}
+body.lb-lock{overflow:hidden}
+
+@media(max-width:980px){
+  .chapter__grid,.spec__intro,.cs-cta__box{grid-template-columns:1fr;gap:40px}
+  .chapter--flip .chapter__copy{order:0}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .spec-grid{grid-template-columns:1fr 1fr}
+  .cs-gal{grid-template-columns:repeat(3,1fr)}
+  .spec-card--last{grid-column:span 2}
+}
+@media(max-width:720px){
+  .cs-hero{padding-top:110px;padding-bottom:56px}
+  .chapter{padding-top:80px;padding-bottom:80px}
+  .spec-grid{grid-template-columns:1fr}
+  .spec-card--feature{grid-column:auto;grid-template-columns:1fr}
+  .spec-card--last{grid-column:auto}
+  .cs-gal{grid-template-columns:repeat(2,1fr);gap:10px}
+  .lb__prev,.lb__next{top:auto;bottom:22px;margin-top:0}
+  .lb__prev{left:calc(50% - 64px)}
+  .lb__next{right:calc(50% - 64px)}
+  .lb__img{max-height:70vh}
+  .lb__figure{margin-bottom:60px}
+}
+@media(max-width:420px){
+  .facts{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Van Lab home"><img src="images/logo.png" alt="Van Lab Custom Conversions" width="340" height="251"></a>
+  <div class="nav__links" id="navlinks">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#work">Our work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact" class="nav__cta">Get a quote</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<main>
+<!-- HERO -->
+<header class="hero cs-hero" id="top">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#work">Our work</a><span aria-hidden="true">/</span><span>VW Caddy</span></nav>
+      <span class="eyebrow">Case study · VW Caddy</span>
+      <h1>Caddy, lined<br>and lit.</h1>
+      <p class="hero__sub">A VW Caddy panel van that came in bare metal and left carpet lined, with a starlight roof, a suede cab and proper leisure power in the back.</p>
+      <div class="hero__actions">
+        <a href="#electrics" class="btn btn--primary">See the electrics</a>
+        <a href="#photos" class="btn btn--ghost">All photos</a>
+      </div>
+    </div>
+    <div class="hero__media">
+      <a class="zoom" href="images/caddy-starlight-roof-to-cab.jpg" data-lb="caddy" data-caption="Starlight roof running from the back doors through to the cab"><img src="images/caddy-starlight-roof-to-cab.jpg" width="1600" height="1067" fetchpriority="high" alt="Fibre optic starlight roof in a carpet lined VW Caddy, looking forward to the cab"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+    </div>
+  </div>
+</header>
+
+<!-- FACTS -->
+<div class="trust">
+  <div class="wrap facts">
+    <div class="trust__item"><b>VW Caddy</b><span>Mk4 panel van</span></div>
+    <div class="trust__item"><b>4 jobs</b><span>Lining, starlight, cab, electrics</span></div>
+    <div class="trust__item"><b>40A</b><span>DC to DC charging</span></div>
+    <div class="trust__item"><b>240V · 12V · USB</b><span>Power in the back</span></div>
+  </div>
+</div>
+
+<!-- 01 LINING -->
+<section class="chapter" aria-labelledby="ch1">
+  <div class="wrap chapter__grid">
+    <div class="chapter__copy reveal">
+      <span class="chapter__num">01</span>
+      <span class="eyebrow">Carpet lining</span>
+      <h2 id="ch1">Lined wall to wall</h2>
+      <p>The whole load area is lined in charcoal carpet. Side walls, wheel arches, the sliding door and the rear door cards, all trimmed tight around the factory fixings.</p>
+      <p>The power panels are set flush into the lining so they look like they came with the van.</p>
+      <ul class="ticks">
+        <li>Charcoal automotive carpet throughout</li>
+        <li>Wheel arches wrapped in one piece</li>
+        <li>Sliding door and rear doors trimmed to match</li>
+      </ul>
+    </div>
+    <div class="shots reveal">
+      <a class="zoom tall" href="images/caddy-load-area-starlight-full.jpg" data-lb="caddy" data-caption="Load area fully carpet lined, looking through to the cab"><img src="images/caddy-load-area-starlight-full.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Carpet lined load area of a VW Caddy with starlight roof above"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+      <a class="zoom" href="images/caddy-load-area-sliding-door-sockets.jpg" data-lb="caddy" data-caption="Sliding door card and side wall lined, with the 240V sockets set in"><img src="images/caddy-load-area-sliding-door-sockets.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Carpet lined sliding door and side wall with a twin socket panel"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+      <a class="zoom" href="images/caddy-sockets-wheel-arch.jpg" data-lb="caddy" data-caption="Wheel arch wrapped in carpet, power panels above"><img style="object-position:18% 35%" src="images/caddy-sockets-wheel-arch.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Carpeted wheel arch with 12V, USB and 240V panels on the wall above"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 STARLIGHT -->
+<section class="chapter chapter--flip" aria-labelledby="ch2">
+  <div class="wrap chapter__grid">
+    <div class="chapter__copy reveal">
+      <span class="chapter__num">02</span>
+      <span class="eyebrow">Starlight roof</span>
+      <h2 id="ch2">Stars from front to back</h2>
+      <p>A fibre optic starlight headliner runs the full length of the van, from the cab right back to the rear doors. Hundreds of individual points in mixed colours, set into a black headliner.</p>
+      <p>LED spotlights are set into the roof for proper working light, on their own switch so the stars can stay on by themselves.</p>
+      <ul class="ticks">
+        <li>Fibre optic stars across cab and load area</li>
+        <li>Recessed LED spotlights on a separate switch</li>
+        <li>Embroidered Van Lab badge on the pillar trim</li>
+      </ul>
+    </div>
+    <div class="shots shots--pair reveal">
+      <a class="zoom" href="images/caddy-cab-seats-starlight-spotlights.jpg" data-lb="caddy" data-caption="Starlight and spotlights over the cab"><img src="images/caddy-cab-seats-starlight-spotlights.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Starlight headliner with LED spotlights above the front seats"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+      <a class="zoom" href="images/caddy-van-lab-embroidered-logo.jpg" data-lb="caddy" data-caption="Embroidered Van Lab badge on the pillar trim"><img src="images/caddy-van-lab-embroidered-logo.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Embroidered Van Lab logo on carpeted pillar trim under the starlight roof"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 CAB -->
+<section class="chapter" aria-labelledby="ch3">
+  <div class="wrap chapter__grid">
+    <div class="chapter__copy reveal">
+      <span class="chapter__num">03</span>
+      <span class="eyebrow">Cab trim</span>
+      <h2 id="ch3">Cab finished in black suede</h2>
+      <p>The cab headliner and pillars are trimmed in black suede, so the front of the van feels as finished as the back. It ties the cab into the starlight roof and takes away the bare plastic look a panel van usually has.</p>
+    </div>
+    <div class="shots shots--pair reveal">
+      <a class="zoom" href="images/caddy-cab-seats-side.jpg" data-lb="caddy" data-caption="Cab headliner and pillars trimmed in black suede"><img src="images/caddy-cab-seats-side.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="VW Caddy cab with black suede headliner and pillars"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+      <a class="zoom" href="images/caddy-van-lab-freshener.jpg" data-lb="caddy" data-caption="Suede A pillar and headliner in the cab"><img style="object-position:82% 75%" src="images/caddy-van-lab-freshener.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Suede trimmed A pillar with a Van Lab air freshener hanging from the mirror"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ELECTRICS -->
+<section class="spec section" id="electrics" aria-labelledby="ch4">
+  <div class="wrap">
+    <div class="spec__intro reveal">
+      <div>
+        <span class="chapter__num">04</span>
+        <span class="eyebrow">Leisure electrics</span>
+        <h2 id="ch4">What's fitted, and why</h2>
+      </div>
+      <p>Electrics are the part of a van you want to forget about, so we only fit kit from brands we trust. Here's exactly what went into this Caddy.</p>
+    </div>
+
+    <div class="spec-grid">
+      <div class="card spec-card spec-card--feature reveal">
+        <a class="zoom" href="images/caddy-renogy-under-seat.jpg" data-lb="caddy" data-caption="Renogy 40A DC to DC charger with the BT-2 Bluetooth module"><img src="images/caddy-renogy-under-seat.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Renogy 12V 40A DC to DC battery charger installed with red and black cabling"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+        <div>
+          <span class="brand">Renogy</span>
+          <h3><span class="mark"></span>12V 40A DC to DC charger</h3>
+          <p>Charges the leisure battery from the alternator whenever the engine's running, and keeps the starter battery protected.</p>
+          <ul>
+            <li>Up to 40A charging, 584W output</li>
+            <li>Works with smart alternators on Euro 6 vans</li>
+            <li>Multi stage charging, set for the battery type</li>
+            <li>Reverse polarity, overvoltage, overcurrent and over temperature protection</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card spec-card reveal">
+        <span class="brand">Renogy</span>
+        <h3><span class="mark"></span>BT-2 Bluetooth module</h3>
+        <p>Links the charger to the Renogy DC Home app, so charging can be checked from a phone.</p>
+        <ul>
+          <li>Live charge readings on your phone</li>
+          <li>Up to around 25m range</li>
+          <li>Draws next to nothing</li>
+        </ul>
+      </div>
+      <div class="card spec-card reveal">
+        <a class="zoom spec-thumb" href="images/caddy-electrics-renogy-dcdc-battery.jpg" data-lb="caddy" data-caption="Charger, fuse board and Renogy leisure battery, all on one board"><img src="images/caddy-electrics-renogy-dcdc-battery.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Renogy DC to DC charger, fuse board and Renogy leisure battery on a mounting board"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+        <span class="brand">Renogy</span>
+        <h3><span class="mark"></span>Leisure battery</h3>
+        <p>A deep cycle leisure battery, strapped down beside the charger, runs everything in the back without touching the van's own battery.</p>
+      </div>
+      <div class="card spec-card reveal">
+        <a class="zoom spec-thumb" href="images/caddy-sockets-wheel-arch.jpg" data-lb="caddy" data-caption="Twin 240V sockets and the 12V panel, set into the lining"><img style="object-position:18% 35%" src="images/caddy-sockets-wheel-arch.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Twin UK 240V sockets set into the carpet lining above the wheel arch"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+        <span class="brand">240V</span>
+        <h3><span class="mark"></span>Inverter &amp; sockets</h3>
+        <p>An inverter feeds twin UK 240V sockets on the side wall, for laptops, chargers and anything else with a normal plug.</p>
+      </div>
+      <div class="card spec-card reveal">
+        <a class="zoom spec-thumb" href="images/caddy-switch-panel-closeup.jpg" data-lb="caddy" data-caption="12V socket, USB charger and voltmeter beside the 240V sockets"><img src="images/caddy-switch-panel-closeup.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Flush 12V socket, USB charger and digital voltmeter panel next to twin 240V sockets"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+        <span class="brand">12V</span>
+        <h3><span class="mark"></span>Power panel</h3>
+        <p>A flush panel next to the sockets with everyday car style power.</p>
+        <ul>
+          <li>12V socket, 6A</li>
+          <li>USB charging socket</li>
+          <li>Digital battery voltmeter with on/off</li>
+        </ul>
+      </div>
+      <div class="card spec-card spec-card--feature reveal">
+        <a class="zoom" href="images/caddy-electrics-fusebox-closeup.jpg" data-lb="caddy" data-caption="Fused main feed and 6 way fuse board with blown fuse indicators"><img src="images/caddy-electrics-fusebox-closeup.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Inline fuse holder, BT-2 module and 6 way blade fuse board on a mounting board"><span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></a>
+        <div>
+          <span class="brand">Protection</span>
+          <h3><span class="mark"></span>Fused and tidy</h3>
+          <p>Every circuit is fused, and it's all laid out on one board so it's easy to get at later.</p>
+          <ul>
+            <li>Main feed fused in an MTA fuse holder</li>
+            <li>6 way blade fuse board with blown fuse indicators</li>
+            <li>Negative bus bar for clean earth runs</li>
+            <li>Heavy gauge cable with crimped, heat shrunk lugs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card spec-card spec-card--last reveal">
+        <span class="brand">Lighting</span>
+        <h3><span class="mark"></span>Switched lights</h3>
+        <p>The starlight roof and the LED spotlights each have their own switch, so you choose between a soft glow and full working light.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section class="section" id="photos" aria-labelledby="photos-h">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Gallery</span>
+      <h2 id="photos-h">Every photo from this build</h2>
+      <p>Tap any photo to see it full size.</p>
+    </div>
+    <div class="cs-gal reveal" id="csgal"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cs-cta section" aria-labelledby="cta-h">
+  <div class="wrap cs-cta__box">
+    <div class="reveal">
+      <span class="eyebrow">Your van next</span>
+      <h2 id="cta-h">Want something similar?</h2>
+      <p>Lining, starlight and electrics can be done together like this, or one at a time. Tell us about your van and how you use it and we'll put a spec together.</p>
+    </div>
+    <div class="cs-cta__actions reveal">
+      <a href="tel:07761351532" class="btn btn--primary">Call 07761 351532</a>
+      <a href="https://www.facebook.com/VANLABCC/" target="_blank" rel="noopener" class="btn btn--ghost">Message on Facebook</a>
+      <a href="index.html#work" class="btn btn--ghost">Back to our work</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__logo"><img src="images/logo.png" alt="Van Lab Custom Conversions" width="340" height="251" loading="lazy" decoding="async"></div>
+    <div class="footer__meta">Van Lab Custom Conversions · Est. 2015 · Lichfield, WS13 6RJ<br><a href="tel:07761351532">07761 351532</a> · <a href="mailto:nathan@van-lab.co.uk">nathan@van-lab.co.uk</a></div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+  <button class="lb__btn lb__close" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <button class="lb__btn lb__prev" id="lbPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+  <figure class="lb__figure">
+    <img class="lb__img" id="lbImg" alt="">
+    <figcaption class="lb__cap"><span class="lb__count" id="lbCount"></span><span id="lbCap"></span></figcaption>
+  </figure>
+  <button class="lb__btn lb__next" id="lbNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+</div>
+
+<script>
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+burger.addEventListener('click',()=>{const o=links.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false);}));
+
+/* full gallery: one entry per photo, in build order */
+const photos=[
+  ['caddy-starlight-roof-to-cab.jpg',1600,1067,'Starlight roof running from the back doors through to the cab'],
+  ['caddy-load-area-starlight-full.jpg',960,1280,'Load area fully carpet lined, looking through to the cab'],
+  ['caddy-load-area-sliding-door-sockets.jpg',960,1280,'Sliding door card and side wall lined, with the 240V sockets set in'],
+  ['caddy-sockets-wheel-arch.jpg',1600,1067,'Wheel arch wrapped in carpet, power panels above','18% 35%'],
+  ['caddy-cab-seats-starlight-spotlights.jpg',960,1280,'Starlight and spotlights over the cab'],
+  ['caddy-van-lab-embroidered-logo.jpg',960,1280,'Embroidered Van Lab badge on the pillar trim'],
+  ['caddy-cab-seats-side.jpg',960,1280,'Cab headliner and pillars trimmed in black suede'],
+  ['caddy-van-lab-freshener.jpg',1600,1067,'Suede A pillar and headliner in the cab','82% 75%'],
+  ['caddy-switch-panel-closeup.jpg',1600,1067,'12V socket, USB charger and voltmeter beside the 240V sockets'],
+  ['caddy-renogy-under-seat.jpg',1600,1067,'Renogy 40A DC to DC charger with the BT-2 Bluetooth module'],
+  ['caddy-electrics-renogy-dcdc-battery.jpg',960,1280,'Charger, fuse board and Renogy leisure battery, all on one board'],
+  ['caddy-exterior-rear-sunset.jpg',960,1280,'The finished Caddy']
+];
+const gal=document.getElementById('csgal');
+const hint='<span class="zoom__hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>';
+gal.innerHTML=photos.map(p=>`<a class="zoom" href="images/${p[0]}" data-lb="gallery" data-caption="${p[3]}"><img${p[4]?` style="object-position:${p[4]}"`:''} src="images/${p[0]}" width="${p[1]}" height="${p[2]}" loading="lazy" decoding="async" alt="${p[3]}">${hint}</a>`).join('');
+
+/* lightbox: each data-lb group pages through itself */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCount=document.getElementById('lbCount');
+let set=[],idx=0,lastFocus=null,touchX=null;
+function show(i){
+  idx=(i+set.length)%set.length;const a=set[idx];
+  lbImg.src=a.getAttribute('href');lbImg.alt=a.querySelector('img').alt;
+  lbCap.textContent=a.dataset.caption||'';lbCount.textContent=(idx+1)+' / '+set.length;
+  const many=set.length>1;document.getElementById('lbPrev').hidden=!many;document.getElementById('lbNext').hidden=!many;
+}
+function openLb(a){
+  const seen=new Set();
+  set=[...document.querySelectorAll('[data-lb="'+a.dataset.lb+'"]')].filter(el=>{const h=el.getAttribute('href');if(seen.has(h))return false;seen.add(h);return true;});
+  lastFocus=a;show(set.findIndex(el=>el.getAttribute('href')===a.getAttribute('href')));
+  lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.classList.add('lb-lock');
+  document.getElementById('lbClose').focus();
+}
+function closeLb(){
+  lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.classList.remove('lb-lock');
+  if(lastFocus)lastFocus.focus();
+}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-lb]');if(a){e.preventDefault();openLb(a);}});
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',()=>show(idx-1));
+document.getElementById('lbNext').addEventListener('click',()=>show(idx+1));
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  else if(e.key==='ArrowLeft')show(idx-1);
+  else if(e.key==='ArrowRight')show(idx+1);
+  else if(e.key==='Tab'){ /* keep focus inside the viewer */
+    const f=[...lb.querySelectorAll('button:not([hidden])')];const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+lb.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1));touchX=null;});
+
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
